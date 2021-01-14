@@ -16,7 +16,6 @@ public class App {
     /* App data */
     private static User user;
 
-
     /* App components */
     private static final JFrame FRAME = new JFrame();
 
@@ -139,9 +138,6 @@ public class App {
                 exp.setIncome(income);
                 exp.setSaving(saving);
 
-                user.addExpense(exp);
-                user.addExpense(exp);
-                user.addExpense(exp);
                 user.addExpense(exp);
 
                 updateHomePage();
