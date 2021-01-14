@@ -1,3 +1,12 @@
-Expenses
-saving  
-income
+JLabel headingNumber = new JLabel("No.");
+headingNumber.setBounds(10, 50, width, 80);
+JLabel headingIncome = new JLabel("Income");
+headingIncome.setBounds(80, 50, width, 80);
+JLabel headingExpense = new JLabel("Expense");
+headingExpense.setBounds(220, 50, width, 80);
+JLabel headingSaving = new JLabel("Saving");
+headingSaving.setBounds(320, 50, width, 80);
+JLabel headingDate = new JLabel("Date");
+headingDate.setBounds(420, 50, width, 80);
+
+no, income, incomeType, expense, saving, date
