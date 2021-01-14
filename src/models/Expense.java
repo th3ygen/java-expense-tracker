@@ -29,6 +29,14 @@ public class Expense {
         return category;
     }
 
+    public Income getIncome() {
+        return income;
+    }
+
+    public Saving getSaving() {
+        return saving;
+    }
+
     public String getDate() {
         return date;
     }
@@ -39,6 +47,14 @@ public class Expense {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public void setIncome(Income income) {
+        this.income = income;
+    }
+
+    public void setSaving(Saving saving) {
+        this.saving = saving;
     }
 
     public void setDate(String date) {
