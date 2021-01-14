@@ -8,8 +8,13 @@ public class Expense {
     private double spend;
     private String date;
 
-    public Expense(double spend) {
+    private Category category;
+    private Income income;
+    private Saving saving;
+
+    public Expense(double spend, Category category) {
         this.spend = spend;
+        this.category = category;
         
         /* date as string */
         DateFormat df = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
@@ -20,12 +25,20 @@ public class Expense {
         return spend;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
     public String getDate() {
         return date;
     }
 
     public void setSpend(double spend) {
         this.spend = spend;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public void setDate(String date) {
