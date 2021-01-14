@@ -49,18 +49,13 @@ public class App {
         submitBtn.setBounds(width/2 - 40, height/2 + 35, 80, 20);
         START_PAGE.add(submitBtn);
 
-        try {
-            submitBtn.addActionListener(e -> {
-                user.setUsername(usernameInput.getText());
+        submitBtn.addActionListener(e -> {
+            user.setUsername(usernameInput.getText());
 
-                updateHomePage();
+            updateHomePage();
 
-                switchToPage(HOME_PAGE);
-            });
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        
+            switchToPage(HOME_PAGE);
+        });
     }
 
     private static void initAddExpensePage() {
@@ -114,8 +109,9 @@ public class App {
         submitBtn.setBounds(width/2 - 70, height - 70, 140, 30);
         ADD_EXPENSE_PAGE.add(submitBtn);
 
-        try {
-            submitBtn.addActionListener(e -> {
+        
+        submitBtn.addActionListener(ev -> {
+            try {
                 /* expense must be less than income */
                 if (Double.parseDouble(incomeValue.getText()) < Double.parseDouble(expensesValue.getText())) {
                     throw new Error("expense must be less than income");
@@ -143,11 +139,10 @@ public class App {
                 updateHomePage();
 
                 switchToPage(HOME_PAGE);
-            });
-            
-        } catch(Exception e) {
-            System.out.println(e.getMessage());
-        }
+            } catch(Exception e) {
+                JOptionPane.showMessageDialog(null, "Invalid input", "Error", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
     }
 
     private static void initExpenseListPage() {
